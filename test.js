@@ -19,7 +19,7 @@ io.on( 'connection' , function( socket ){
 	// });
 
     socket.on('information', function(info){
-        socket.emit('displayInformation', info)
+        socket.emit('showInfo', info)
         console.log(info);
     });
 

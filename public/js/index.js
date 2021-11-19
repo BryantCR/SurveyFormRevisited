@@ -23,7 +23,7 @@ $('.form').on('submit', function(event){
     socket.emit('information', info);
 });
 
-socket.on('displayInformation', function(info){
+socket.on('showInfo', function(info){
     let message = `<p> You emited the following information to the server: Name: ${info.name}, Location: ${info.location}, Favorite language: ${info.favorite} and Comment: ${info.comment} and your lucky number emited by the server is: ${info.number} </p>`;
     $('.message' ).append(message);
 });
