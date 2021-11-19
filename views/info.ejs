@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Result</title>
+        <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
     </head>
     <body>
         <main>
@@ -15,5 +16,11 @@
             <h4>Comment: <%= dojoinfo.comment %> </h4>
             <a href="/">Go back</a>
         </main>
+
+        <div>
+        </div>
+        <script type ="text/javascript" src="/socket.io/socket.io.js"></script> 
+            <!--Esta siempre es la de los sockets para HTML-->
+        <script src="./js/index.js"></script>
     </body>
 </html>
