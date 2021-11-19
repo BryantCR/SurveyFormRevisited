@@ -5,16 +5,12 @@ const io = require('socket.io')(server);
 
 var number = Math.floor(Math.random()*100+1);
 
-//server.listen(8080);
-var counter = 0;
-
 app.set( 'views', __dirname + '/views' ); 
 app.set( 'view engine', 'ejs' );
 app.use(express.static(__dirname + "/static"));
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
-
 
 let dojoinfo = {}
 
@@ -36,11 +32,7 @@ app.post( '/load/info', function(request,response){
 	dojoinfo.comment = comment;
 	
 	response.redirect( '/info' )
-})
-
-io.on( 'connection' , function( socket ){
-	console.log("You have reached the server, welcome!")
-})
+});
 
 app.get('/info', function( request, response ){
 	response.render( 'info', {dojoinfo} ); 
@@ -48,5 +40,7 @@ app.get('/info', function( request, response ){
 
 app.listen(function(){
     console.log( 'This server is running in port 8080.' );
-})
+});
+
+
 
