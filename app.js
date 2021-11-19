@@ -19,7 +19,7 @@ app.get('/info', function( request, response ){
 	response.render( 'display', {dojoinfo} ); 
 });
 
-app.post( '/submit/info', function(request,response){
+app.post( '/load/info', function(request,response){
     console.log( request.body );
 	const name = request.body.yname;
 	const location = request.body.location;
@@ -35,5 +35,5 @@ app.post( '/submit/info', function(request,response){
 })
 
 app.listen(8080, function(){
-    console.log('Hello')
+    console.log( 'This server is running in port 8080.' );
 })

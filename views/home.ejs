@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+    </head>
+    <body>
+        <main style="margin: 40px; border: 2px solid black; border-radius: 5px; padding: 25px; width: 50%;">
+            <form method="POST" action="/load/info">
+            
+                <div style="margin-bottom: 20px;">
+                    <label>
+                        Your Name:
+                    </label>
+                    <input type="text" name="yname">
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label>
+                        Dojo Location:
+                    </label>
+                    <select name="location">
+                        <option>Texa</option>
+                        <option>Seattle</option>
+                        <option>New York</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label>
+                        Favorite Language:
+                    </label>
+                    <select name="language">
+                        <option value="JavaScript" >JavaScript</option>
+                        <option value="Phyton" >Phyton</option>
+                        <option value="Java" >Java</option>
+                        <option value="C++" >C++</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label>
+                        Comment (Optional):
+                    </label>
+                    <textarea name="comment"></textarea>
+                </div>
+                <input type="submit">Submit</input>
+            </form>
+        </main>
+    </body>
+</html>
