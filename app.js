@@ -12,11 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 let dojoinfo = {}
 
 app.get('/', function( request, response ){
-	response.render( 'form' ); 
-});
-
-app.get('/info', function( request, response ){
-	response.render( 'display', {dojoinfo} ); 
+	response.render( 'home' ); 
 });
 
 app.post( '/load/info', function(request,response){
@@ -33,6 +29,10 @@ app.post( '/load/info', function(request,response){
 	
 	response.redirect( '/info' )
 })
+
+app.get('/info', function( request, response ){
+	response.render( 'info', {dojoinfo} ); 
+});
 
 app.listen(8080, function(){
     console.log( 'This server is running in port 8080.' );
